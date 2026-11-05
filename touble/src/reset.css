@@ -1,0 +1,248 @@
+/* 1. 统一盒模型 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. 根元素基础设置 */
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 3.  body 基础样式 */
+body {
+  min-height: 100vh;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  text-rendering: optimizeLegibility;
+}
+
+/* 4. 标题 - 去除默认粗细和间距 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+/* 5. 段落 */
+p {
+  margin: 0;
+}
+
+/* 6. 列表 - 去除默认项目符号和缩进 */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 7. 链接 - 去除默认颜色和下划线 */
+a {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+/* 8. 图片和媒体元素 */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 9. 表单元素 - 去除默认样式 */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 输入框去除默认样式 */
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* 去除 input 聚焦时的默认 outline */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+/* 按钮 - 去除默认按钮样式 */
+button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* 去除按钮点击时的默认边框 */
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* 10. 表格 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 0;
+  text-align: left;
+  font-weight: normal;
+}
+
+/* 11. 引用和标记 */
+blockquote,
+q {
+  quotes: none;
+  margin: 0;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+}
+
+/* 12. 水平线 */
+hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 0;
+}
+
+/* 13. 强调标签 */
+strong,
+b {
+  font-weight: bold;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+/* 14. 代码 */
+code,
+pre,
+kbd,
+samp {
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  font-size: inherit;
+}
+
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* 15. 去除默认聚焦轮廓（可根据需要自定义） */
+:focus {
+  outline: none;
+}
+
+/* 16. 隐藏元素 */
+[hidden] {
+  display: none !important;
+}
+
+/* 17. 禁用文本选择（可选，按需使用） */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* 18. 清除浮动 */
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* 19. 滚动条美化（可选） */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* 20. 低代码项目常用 - 去除拖拽时的默认行为 */
+[draggable='true'] {
+  -webkit-user-drag: element;
+}
+
+/* 防止图片被选中拖拽 */
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+div[role='button'] {
+  outline: 0;
+}

@@ -1,0 +1,77 @@
+.layers {
+  padding: 8px 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+
+  &.selected {
+    background-color: #e6f4ff;
+    border: 1px solid #1677ff;
+  }
+
+  &.hidden {
+    .title {
+      color: #bfbfbf;
+      text-decoration: line-through;
+    }
+  }
+}
+
+.title {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+
+  span {
+    cursor: text;
+  }
+
+  :global {
+    .ant-input {
+      font-size: 14px;
+    }
+
+    .ant-input:focus,
+    .ant-input-focused {
+      border-color: #d9d9d9;
+      box-shadow: none;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.iconBtn {
+  font-size: 14px;
+  color: #999;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 2px;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #1677ff;
+  }
+}

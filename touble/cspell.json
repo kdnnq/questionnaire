@@ -1,0 +1,36 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "ahooks",
+    "antd",
+    "axios",
+    "customword",
+    "immer",
+    "mockjs",
+    "myprojectname",
+    "reslut",
+    "uparrow",
+    "vite",
+    "vitejs",
+    "vitest"
+  ],
+  "ignoreWords": [
+    "donotcheck"
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    "dist/**",
+    "build/**",
+    "*.min.js"
+  ],
+  "dictionaries": [
+    "typescript",
+    "node",
+    "softwareTerms"
+  ],
+  "allowCompoundWords": true,
+  "ignoreRegExpList": [
+    "\\/\\/.*"
+  ]
+}
